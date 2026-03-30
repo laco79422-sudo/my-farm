@@ -1,0 +1,46 @@
+.diag-result-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.diag-result-card__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.diag-result-card__img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+}
+
+.diag-result-card__blur-inline {
+  filter: blur(4px);
+  user-select: none;
+}
+
+.diag-result-card__masked {
+  filter: blur(3px);
+  user-select: none;
+  font-size: 0.85rem;
+}
+
+.diag-result-card__lock-box {
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(250, 204, 21, 0.35);
+  background: rgba(250, 204, 21, 0.06);
+}
+
+.diag-result-card--locked .diag-result-card__veil {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 42%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.42), transparent);
+}

@@ -1,0 +1,70 @@
+// Firestore 보안 규칙 예시 — 운영 전 반드시 검토·강화하세요.
+// Firebase 콘솔 → Firestore → 규칙 에 붙여 넣고 "게시" 합니다.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // 사용자 프로필: 본인만 읽기/쓰기
+    match /users/{uid} {
+      allow read: if isSignedIn();
+      allow create: if isOwner(uid);
+      allow update, delete: if isOwner(uid);
+    }
+
+    match /farms/{farmId} {
+      allow read: if true;
+      allow write: if isSignedIn() && resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /plants/{plantId} {
+      allow read: if true;
+      allow write: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /daily_logs/{logId} {
+      allow read, write: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /diagnoses/{id} {
+      allow read, write: if isSignedIn() && request.resource.data.ownerUid == request.auth.uid;
+    }
+
+    match /market_products/{id} {
+      allow read: if true;
+      allow write: if isSignedIn() && request.resource.data.sellerUid == request.auth.uid;
+    }
+
+    match /community_posts/{id} {
+      allow read: if true;
+      allow create: if isSignedIn();
+      allow update, delete: if isSignedIn() && resource.data.authorUid == request.auth.uid;
+    }
+
+    // 간단 게시판 (posts 컬렉션)
+    match /posts/{postId} {
+      allow read: if true;
+      allow create: if isSignedIn() && request.resource.data.uid == request.auth.uid;
+      allow update, delete: if isSignedIn() && resource.data.uid == request.auth.uid;
+    }
+
+    match /point_logs/{id} {
+      allow read: if isSignedIn() && resource.data.uid == request.auth.uid;
+      // 실제 포인트 변경은 Cloud Functions 권장 — 여기서는 예시로 제한
+      allow create: if false;
+    }
+
+    match /requests/{id} {
+      allow read: if isSignedIn() && resource.data.requesterUid == request.auth.uid;
+      allow create: if isSignedIn() && request.resource.data.requesterUid == request.auth.uid;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.reward-unlock-btn {
+  margin-top: 1.25rem;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #042f2e;
+  background: linear-gradient(135deg, #fde047, #facc15);
+  box-shadow: 0 4px 14px rgba(250, 204, 21, 0.25);
+}
+
+.reward-unlock-btn:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+
+.reward-unlock-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.reward-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: max(12px, env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.55);
+  animation: rewardFadeIn 0.2s ease;
+}
+
+@media (min-width: 600px) {
+  .reward-modal-overlay {
+    align-items: center;
+  }
+}
+
+@keyframes rewardFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.reward-modal {
+  width: 100%;
+  max-width: 420px;
+  max-height: min(88vh, 560px);
+  overflow: auto;
+  border-radius: 16px 16px 0 0;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  padding: 1.25rem 1.25rem 1.5rem;
+  box-shadow: 0 -8px 40px rgba(0, 0, 0, 0.35);
+}
+
+@media (min-width: 600px) {
+  .reward-modal {
+    border-radius: 16px;
+  }
+}
+
+.reward-modal__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.reward-modal__lead {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.reward-modal__mock {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px dashed rgba(250, 204, 21, 0.45);
+  background: rgba(250, 204, 21, 0.06);
+  text-align: center;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.reward-modal__progress {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+
+.reward-modal__progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #facc15, #eab308);
+  transition: width 0.1s linear;
+}
+
+.reward-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.reward-modal__hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}

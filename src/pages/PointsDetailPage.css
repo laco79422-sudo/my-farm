@@ -1,0 +1,184 @@
+.points-detail {
+  max-width: 36rem;
+}
+
+.points-detail__lead {
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+
+.points-detail__card {
+  margin-bottom: 1rem;
+}
+
+.points-detail__h2 {
+  margin: 0 0 0.65rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.points-detail__balance-val {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-lime);
+  font-variant-numeric: tabular-nums;
+}
+
+.points-detail__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.points-detail__row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.25rem 0.75rem;
+  font-size: 0.88rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.points-detail__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.points-detail__reason {
+  grid-column: 1 / -1;
+  font-weight: 600;
+}
+
+.points-detail__at {
+  grid-column: 1 / -1;
+  font-size: 0.78rem;
+}
+
+.points-detail__delta {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.points-detail__delta--plus {
+  color: var(--color-lime);
+}
+
+.points-detail__delta--minus {
+  color: #fca5a5;
+}
+
+.points-detail__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.points-detail__table td {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.points-detail__table-pts {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--color-mint);
+}
+
+.points-detail__body {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.points-detail__charge-section,
+.points-detail__howto {
+  border-color: rgba(94, 234, 212, 0.35);
+}
+
+.points-detail__charge-hint {
+  margin-bottom: 0.75rem;
+}
+
+.points-detail__charge-err {
+  margin: 0 0 0.75rem;
+  font-size: 0.85rem;
+  color: #fca5a5;
+}
+
+.points-detail__charge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 0.65rem;
+}
+
+@media (max-width: 380px) {
+  .points-detail__charge-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.points-detail__charge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0.85rem 0.65rem;
+  text-align: center;
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: linear-gradient(165deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.98));
+  color: var(--color-text, #e2e8f0);
+  transition: border-color 0.15s ease, transform 0.12s ease, box-shadow 0.15s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.points-detail__charge-card:hover:not(:disabled) {
+  border-color: rgba(94, 234, 212, 0.55);
+  box-shadow: 0 4px 14px rgba(45, 212, 191, 0.12);
+  transform: translateY(-1px);
+}
+
+.points-detail__charge-card:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.points-detail__charge-card-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+}
+
+.points-detail__charge-card-amount {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-lime);
+  font-variant-numeric: tabular-nums;
+}
+
+.points-detail__charge-card--ad {
+  width: 100%;
+  align-items: center;
+}
+
+.points-detail__charge-card-sub {
+  font-size: 0.75rem;
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+

@@ -1,0 +1,228 @@
+.farmer-rank-page {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.farmer-rank-page__back {
+  margin-bottom: 0.75rem;
+}
+
+.farmer-rank-card {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  padding: 1rem 1.1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+.farmer-rank-card__title {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* CurrentRank */
+.fr-current {
+  background: linear-gradient(145deg, rgba(94, 234, 212, 0.12), var(--color-bg-card));
+  border-color: rgba(94, 234, 212, 0.35);
+}
+
+.fr-current__label {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-mint);
+  line-height: 1.25;
+}
+
+.fr-current__hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+/* RankProgressBar */
+.fr-bar {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.25rem;
+  margin: 0 -0.15rem;
+}
+
+.fr-bar__track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+  min-width: min(100%, 520px);
+}
+
+.fr-bar__segment {
+  flex: 1 1 0;
+  min-width: 3.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.25rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.fr-bar__segment--done {
+  border-color: rgba(94, 234, 212, 0.4);
+  color: var(--color-mint);
+  background: rgba(94, 234, 212, 0.08);
+}
+
+.fr-bar__segment--current {
+  border-color: var(--color-mint);
+  color: #042f2e;
+  background: linear-gradient(180deg, var(--color-mint), var(--color-lime));
+  box-shadow: 0 0 0 1px rgba(94, 234, 212, 0.35);
+}
+
+.fr-bar__segment--next {
+  outline: 2px dashed rgba(94, 234, 212, 0.45);
+  outline-offset: 1px;
+}
+
+.fr-bar__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.5;
+}
+
+.fr-bar__segment--current .fr-bar__dot {
+  opacity: 1;
+  background: #042f2e;
+}
+
+.fr-bar__chev {
+  display: flex;
+  align-items: center;
+  color: var(--color-text-muted);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  padding: 0 0.05rem;
+}
+
+/* Progress rows */
+.fr-metric {
+  margin-bottom: 0.85rem;
+}
+
+.fr-metric:last-child {
+  margin-bottom: 0;
+}
+
+.fr-metric__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  margin-bottom: 0.35rem;
+}
+
+.fr-metric__label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.fr-metric__nums {
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+
+.fr-metric__bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.fr-metric__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-mint), var(--color-lime));
+  transition: width 0.35s ease;
+}
+
+.fr-metric__fill--muted {
+  opacity: 0.45;
+}
+
+/* NextRank */
+.fr-next__name {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.fr-next__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+/* Benefits */
+.fr-benefits__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.fr-benefits__list li {
+  margin-bottom: 0.25rem;
+}
+
+/* Local goal */
+.fr-goal {
+  border-color: rgba(190, 242, 100, 0.35);
+  background: linear-gradient(145deg, rgba(190, 242, 100, 0.1), var(--color-bg-card));
+}
+
+.fr-goal__title {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--color-lime);
+}
+
+.fr-goal__sub {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.fr-goal--ok .fr-goal__title {
+  color: var(--color-mint);
+}
+
+@media (min-width: 480px) {
+  .fr-bar__segment {
+    min-width: 4rem;
+    font-size: 0.78rem;
+  }
+}

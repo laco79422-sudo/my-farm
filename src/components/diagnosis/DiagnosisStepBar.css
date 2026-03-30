@@ -1,0 +1,53 @@
+.diag-steps__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.35rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+}
+
+.diag-steps__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.diag-steps__item--current {
+  border-color: rgba(94, 234, 212, 0.45);
+  color: var(--color-mint);
+  background: var(--color-mint-soft);
+}
+
+.diag-steps__item--done {
+  border-color: rgba(190, 242, 100, 0.25);
+  color: var(--color-lime);
+}
+
+.diag-steps__num {
+  display: grid;
+  place-items: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.65rem;
+}
+
+.diag-steps__item--current .diag-steps__num {
+  background: rgba(94, 234, 212, 0.25);
+  color: var(--color-text);
+}
+
+.diag-steps__code {
+  font-size: 0.7rem;
+  opacity: 0.85;
+}

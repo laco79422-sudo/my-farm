@@ -1,0 +1,141 @@
+.plant-steps {
+  margin-top: 1rem;
+}
+
+.plant-steps__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plant-steps__item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.plant-steps__item--done {
+  color: var(--color-mint);
+}
+
+.plant-steps__item--current {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.plant-steps__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  font-size: 0.7rem;
+}
+
+.plant-steps__item--current .plant-steps__num {
+  border-color: var(--color-mint);
+  background: rgba(94, 234, 212, 0.12);
+}
+
+.plant-steps__hint {
+  margin: 0.65rem 0 0;
+  font-size: 0.88rem;
+}
+
+.plant-id-card__title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.plant-id-card__sci {
+  margin: 0.25rem 0 0;
+  font-size: 0.88rem;
+  font-style: italic;
+}
+
+.plant-id-card__similar {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.plant-id-card__h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.9rem;
+}
+
+.plant-id-card__similar ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+}
+
+.plant-diagnose-cta {
+  margin-top: 1.25rem;
+  width: 100%;
+}
+
+/* 플로팅 — 하단 우측, 네비/콘텐츠 위 */
+.plant-fab {
+  position: fixed;
+  right: max(12px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 1rem 0.65rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(94, 234, 212, 0.45);
+  background: linear-gradient(135deg, rgba(15, 40, 35, 0.97), rgba(10, 28, 26, 0.98));
+  color: var(--color-mint);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  max-width: calc(100vw - 24px);
+}
+
+.plant-fab:hover {
+  border-color: var(--color-mint);
+}
+
+.plant-fab__icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.plant-fab__text {
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 900px) {
+  .plant-fab {
+    right: max(24px, env(safe-area-inset-right));
+    bottom: max(24px, env(safe-area-inset-bottom));
+  }
+}
+
+/* 모바일 하단 탭 위로 — FAB이 탭바에 가리지 않도록 */
+@media (max-width: 1023px) {
+  .app-layout--mobile-tabs .plant-fab {
+    bottom: max(
+      calc(var(--mobile-tab-h, 56px) + 12px),
+      calc(env(safe-area-inset-bottom, 0px) + var(--mobile-tab-h, 56px) + 4px)
+    );
+  }
+}
+
+.plant-camera-entry {
+  width: 100%;
+  max-width: 100%;
+}

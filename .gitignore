@@ -1,0 +1,37 @@
+# --- 필수: 커밋에서 제외 ---
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build
+dist-ssr
+
+# 기타 환경 파일 (.env.example 만 예외로 추적)
+.env.*.local
+.env.*
+!.env.example
+
+# OS / editor
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Netlify 로컬
+.netlify

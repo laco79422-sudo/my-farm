@@ -1,0 +1,179 @@
+.market-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.market-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 44px rgba(15, 23, 42, 0.18);
+}
+
+.market-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: #f1f5f9;
+}
+
+.market-card__badge {
+  position: absolute;
+  top: 0.65rem;
+  left: 0.65rem;
+  z-index: 1;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+.market-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.market-card__body {
+  padding: 1rem 1.1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex: 1;
+}
+
+.market-card__farm {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.market-card__farm-icon {
+  font-size: 0.95rem;
+}
+
+.market-card__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+}
+
+.market-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  color: #475569;
+}
+
+.market-card__qty {
+  font-weight: 600;
+}
+
+.market-card__origin {
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-pill);
+  background: #f1f5f9;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.market-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+}
+
+.market-card__stars {
+  color: #fbbf24;
+  letter-spacing: -0.05em;
+}
+
+.market-card__rating-num {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.market-card__reviews {
+  color: #94a3b8;
+}
+
+.market-card__ship {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #64748b;
+  padding: 0.45rem 0.55rem;
+  border-radius: var(--radius-sm);
+  background: #f8fafc;
+  border: 1px dashed #e2e8f0;
+}
+
+.market-card__buy-row {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.35rem;
+}
+
+.market-card__price-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.1rem;
+}
+
+.market-card__price {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #059669;
+  letter-spacing: -0.02em;
+}
+
+.market-card__won {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-left: 0.15rem;
+}
+
+.market-card__buy {
+  flex-shrink: 0;
+  min-width: 108px;
+  min-height: 46px;
+  font-size: 0.88rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 380px) {
+  .market-card__buy-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .market-card__buy {
+    width: 100%;
+  }
+}

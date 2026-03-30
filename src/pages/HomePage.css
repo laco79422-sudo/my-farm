@@ -1,0 +1,482 @@
+/* 홈 전용 — 가로 스크롤·모바일 웹뷰 우측 잘림 방지 (min-width:0, overflow-x) */
+
+.home-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.home-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 16px 5.5rem;
+  min-width: 0;
+}
+
+.home-lead {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* 헤더 (글로벌 Navbar 아래 보조 행) */
+.home-top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.home-logo {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.home-login-btn {
+  flex-shrink: 0;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.home-login-btn:hover {
+  border-color: var(--color-border-bright);
+  background: var(--color-bg-card);
+}
+
+.home-login-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.home-user-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.home-user-chip__name {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text);
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.home-user-chip__link {
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-mint);
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.home-user-chip__link:hover {
+  border-color: var(--color-border-bright);
+}
+
+/* 가로 카테고리 (당근 스타일) */
+.home-category-scroll {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 12px 0 4px;
+  margin: 0 -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  min-width: 0;
+}
+
+.home-category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.home-category {
+  flex: 0 0 auto;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.home-category:hover {
+  color: var(--color-text);
+  background: var(--color-bg-elevated);
+}
+
+.home-category--active {
+  background: linear-gradient(135deg, #7cf0d2, #b8ff6a);
+  color: #042f2e;
+  border-color: transparent;
+}
+
+/* 메인 진단 카드 */
+.home-diagnosis-card {
+  margin-top: 16px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(28, 42, 42, 0.95), rgba(15, 27, 27, 0.98));
+  border: 1px solid var(--color-border);
+  text-align: center;
+  min-width: 0;
+}
+
+.home-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(124, 240, 210, 0.15);
+  color: var(--color-mint);
+  margin-bottom: 0.75rem;
+}
+
+.home-diagnosis-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.3;
+}
+
+.home-diagnosis-card > p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.home-primary-btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 14px;
+  margin-top: 16px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #7cf0d2, #5eead4);
+  color: #042f2e;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.home-secondary-btn {
+  width: 100%;
+  max-width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid rgba(124, 240, 210, 0.55);
+  color: var(--color-mint);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.home-sub-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.home-sub-links a {
+  color: var(--color-mint);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.home-sub-links__btn {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: var(--color-mint);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.home-sub-links__btn:hover {
+  color: var(--color-text);
+}
+
+/* 증상 */
+.home-quick-symptoms {
+  margin-top: 1.75rem;
+}
+
+.home-quick-symptoms h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.home-symptom-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-symptom-list button {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.home-symptom-list button:hover {
+  background: var(--color-bg-elevated);
+  border-color: var(--color-border-bright);
+}
+
+/* 로그인 유도 */
+.home-login-cta {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  text-align: center;
+}
+
+.home-login-cta p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.home-login-main-btn {
+  margin-top: 12px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, var(--color-mint), var(--color-mint-dim));
+  color: #042f2e;
+}
+
+.home-login-cta__loading {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+.home-login-main-btn--farm {
+  background: linear-gradient(135deg, #7cf0d2, #5eead4);
+}
+
+.home-examples {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.home-examples h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* 흐름 중심 홈 */
+.home-inner--flow {
+  max-width: 420px;
+  padding-top: 1.25rem;
+}
+
+.home-flow-hero {
+  text-align: center;
+  padding: 1.5rem 1rem 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: linear-gradient(165deg, rgba(94, 234, 212, 0.12), var(--color-bg-card));
+}
+
+.home-flow-hero__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 5vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.home-flow-hero__desc {
+  margin: 0 0 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  max-width: 22rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-flow-hero__camera-btn {
+  width: 100%;
+  max-width: 320px;
+  min-height: 120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 1.25rem 1rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #042f2e;
+  background: linear-gradient(135deg, var(--color-mint), var(--color-lime));
+  box-shadow: 0 8px 28px rgba(94, 234, 212, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.home-flow-hero__camera-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(94, 234, 212, 0.32);
+}
+
+.home-flow-hero__camera-btn:active {
+  transform: translateY(0);
+}
+
+.home-flow-hero__camera-icon {
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.home-flow-hero__secondary {
+  margin-top: 0.65rem;
+  width: 100%;
+  max-width: 320px;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.home-flow-foot {
+  margin-top: 2rem;
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  text-align: left;
+}
+
+.home-flow-foot__h {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.home-flow-foot__steps {
+  margin: 0 0 0.75rem;
+  padding-left: 1.2rem;
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.home-flow-foot__hint {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.home-flow-foot__partner {
+  margin: 0.85rem 0 0;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.home-flow-foot__partner-link {
+  color: var(--color-mint);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-flow-foot__partner-link:hover {
+  text-decoration: underline;
+}
+
+.home-flow-foot__partner-desc {
+  font-size: 0.74rem;
+}
+
+/* 모바일: 하단 탭 위 중앙 촬영 버튼 최대 강조 */
+@media (max-width: 1023px) {
+  .page-home .home-inner--flow {
+    padding-bottom: 0.25rem;
+  }
+
+  .page-home .home-flow-hero {
+    padding: 1.25rem 0.75rem 1.5rem;
+  }
+
+  .page-home .home-flow-hero__title {
+    font-size: 1.5rem;
+  }
+
+  .page-home .home-flow-hero__camera-btn {
+    max-width: none;
+    width: 100%;
+    min-height: 132px;
+    font-size: 1.12rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .page-home .home-flow-hero__camera-icon {
+    font-size: 2.75rem;
+  }
+
+  .page-home .home-flow-foot {
+    margin-top: 1.35rem;
+    padding: 0.85rem 0.9rem;
+  }
+}

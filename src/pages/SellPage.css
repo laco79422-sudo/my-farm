@@ -1,0 +1,16 @@
+.sell-page__input,
+.sell-page__textarea {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.sell-page__file {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}

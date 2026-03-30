@@ -1,0 +1,263 @@
+.mp-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.mp-card__lf-ribbon {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.45rem;
+  z-index: 1;
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: #042f2e;
+  background: linear-gradient(135deg, var(--color-mint), var(--color-lime));
+  pointer-events: none;
+}
+
+.mp-card__grade,
+.mp-card__trust {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.mp-card__img,
+.mp-card__ph {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.mp-card__ph {
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  background: var(--color-bg-elevated);
+}
+
+.mp-card__body {
+  padding: 0.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.mp-card__title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.mp-card__meta {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.mp-card__badge {
+  margin: auto 0 0;
+  font-size: 0.7rem;
+  color: var(--color-lime);
+  font-weight: 600;
+}
+
+.farmers-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.farmers-tabs__btn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.farmers-tabs__btn--on {
+  border-color: transparent;
+  color: #042f2e;
+  background: linear-gradient(135deg, var(--color-mint), var(--color-lime));
+}
+
+.farmers-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.farmers-toolbar label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.farmers-toolbar select {
+  padding: 0.4rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 0.82rem;
+}
+
+.farmers-region-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.farmers-region-pill {
+  padding: 0.5rem 0.65rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-size: 0.78rem;
+  text-align: left;
+  background: var(--color-bg-elevated);
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+.farmers-region-pill--active {
+  border-color: var(--color-mint);
+  color: var(--color-mint);
+}
+
+.mp-card--link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.mp-card--link:hover {
+  border-color: rgba(94, 234, 212, 0.45);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+}
+
+.mp-card--link:focus-visible {
+  outline: 2px solid var(--color-mint);
+  outline-offset: 2px;
+}
+
+.mp-card__flow-hint {
+  margin: 0.35rem 0 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--color-mint);
+}
+
+.farmers-tabs--main {
+  margin-top: 1.1rem;
+}
+
+.farmers-page__summary {
+  font-size: 0.85rem;
+  margin: 0 0 0.85rem;
+  line-height: 1.5;
+}
+
+.farmers-region-block {
+  margin-bottom: 0.25rem;
+}
+
+.farmers-region-select-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.farmers-region-select-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.farmers-region-select-row select {
+  padding: 0.45rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 0.84rem;
+  min-width: 140px;
+}
+
+.farmers-local-only {
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.45rem !important;
+  font-size: 0.82rem !important;
+  font-weight: 600;
+  color: var(--color-text) !important;
+  cursor: pointer;
+  user-select: none;
+}
+
+.farmer-public-profile__crumb {
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.farmer-public-profile__crumb a {
+  color: var(--color-mint);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.farmer-public-profile__h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.farmer-public-profile__product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.farmer-public-profile__add {
+  width: 100%;
+}
+
+.farmer-public-profile__post-list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.farmer-public-profile__post-list li {
+  font-size: 0.88rem;
+}
