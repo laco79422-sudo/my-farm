@@ -144,8 +144,7 @@ Firebase 콘솔 → **Authentication → Settings → Authorized domains** 에
 
 - React 19, TypeScript, Vite 8  
 - React Router, Zustand  
-- Firebase Auth / Firestore / Storage  
-- PWA (`vite-plugin-pwa`)
+- Firebase Auth / Firestore / Storage
 
 ---
 
