@@ -111,6 +111,8 @@ git push -u origin main
 | **Build command** | `npm run build` |
 | **Publish directory** | `dist` |
 
+**이름 정리:** 소스 안의 정적 파일 폴더는 Vite 기준 영문 **`public/`** 입니다. Netlify **Publish directory**에는 빌드 출력인 **`dist`** 만 넣습니다. (UI에서 저장소·사이트를 “공개(Public)”로 둘 때의 **Public** 과, 폴더 이름 **public** 은 서로 다른 개념입니다.)
+
 이 저장소의 **`netlify.toml`** 에도 동일한 설정이 들어 있어, 저장소 연결 시 자동으로 잡히는 경우가 많습니다.
 
 ### 환경 변수 (Netlify)
